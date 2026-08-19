@@ -104,13 +104,9 @@ export function ChatThread({ conversation }: { conversation: Conversation }) {
               <MessageScrollerItem messageId="typing-indicator">
                 <Message align="start">
                   <MessageAvatar>
-                    <Avatar className="size-8">
-                      <AvatarImage
-                        src={conversation.clientAvatar || "/placeholder.svg"}
-                        alt={conversation.clientName}
-                      />
-                      <AvatarFallback>{initials(conversation.clientName)}</AvatarFallback>
-                    </Avatar>
+                    <div className="flex size-8 items-center justify-center rounded-full bg-primary text-primary-foreground">
+                      <BotIcon className="size-4" />
+                    </div>
                   </MessageAvatar>
                   <MessageContent>
                     <Bubble align="start" variant="secondary">
